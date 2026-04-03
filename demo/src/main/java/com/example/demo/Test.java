@@ -13,39 +13,39 @@ public class Test {
     public String processUser(String username, String password, int age) {
         String result = "";
 
-        // 🔴 Hardcoded admin check
+        
         if (username.equals("admin") && password.equals("admin123")) {
             System.out.println("Admin logged in");
         }
 
-        // 🔴 No null checks
+       
         if (username.length() > 5) {
             result = "Valid user";
         }
 
-        // 🔴 SQL Injection vulnerability
+       
         String query = "SELECT * FROM users WHERE username = '" + username + "' AND password = '" + password + "'";
         System.out.println("Executing query: " + query);
 
-        // 🔴 Poor logging practice (sensitive data exposure)
+       
         System.out.println("User password is: " + password);
 
-        // 🔴 Magic number & bad validation
+        
         if (age > 18) {
             result += " Adult";
         } else if (age < 0) {
             result = "Invalid age";
         }
 
-        // 🔴 Inefficient string concatenation in loop
+       
         for (int i = 0; i < 5; i++) {
             result = result + "!";
         }
 
-        // 🔴 Unused variable
+       
         int temp = 100;
 
-        // 🔴 Exception swallowing
+
         try {
             int x = 10 / 0;
         } catch (Exception e) {
