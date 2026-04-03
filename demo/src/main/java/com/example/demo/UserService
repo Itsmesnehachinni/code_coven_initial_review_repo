@@ -16,11 +16,11 @@ public class UserService {
 
         System.out.println("User password is: " + password);
 
-        if (age > 18) {
-            result += " Adult";
-        } else if (age < 0) {
-            result = "Invalid age";
-        }
+ //      if (age > 18) {
+   //         result += " Adult";
+   //     } else if (age < 0) {
+   //         result = "Invalid age";
+   //     }
 
         for (int i = 0; i < 5; i++) {
             result = result + "!";
