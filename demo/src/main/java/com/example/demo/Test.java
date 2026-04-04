@@ -4,11 +4,11 @@ import java.sql.*;
 import java.util.logging.Logger;
 
 public class Test {
-    private static final Logger logger = Logger.getLogger(VulnerableService.class.getName());
+    Logger logger = Logger.getLogger(VulnerableService.class.getName());
     
     
-    private static final String DB_PASSWORD = "super_secret_password_123";
-    private static int requestCounter = 0;
+    String DB_PASSWORD = "super_secret_password_123";
+    int requestCounter = 0;
 
     public void processUserRequest(String userId) {
        
